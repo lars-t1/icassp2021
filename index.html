@@ -1,1 +1,51 @@
-<h1>ICASSP2021</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Recurrent Phase Reconstruction Using Estimated Phase Derivatives
+from Deep Neural Networks | Listening Examples</title>
+    <meta name="robots" content="noindex" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="trackswitch.css" />
+  </head>
+
+  <body>
+
+    <h1>Recurrent Phase Reconstruction Using Estimated Phase Derivatives
+from Deep Neural Networks | Listening Examples</h1>
+
+    <h2>p226_003.wav</h2>
+
+    <div class="player">
+      <ts-track title="Original">
+        <ts-source src="p226_003_uncorrupted.wav" type="audio/wav"></ts-source>
+      </ts-track>
+      <ts-track title="IF integral">
+        <ts-source src="p226_003_if.wav" type="audio/wav"></ts-source>
+      </ts-track>
+      <ts-track title="RPU">
+        <ts-source src="p226_003_rpu.wav" type="audio/wav"></ts-source>
+      </ts-track>
+      <ts-track title="Proposed">
+        <ts-source src="p226_003_magnitudeWeightedAverage.wav" type="audio/wav"></ts-source>
+      </ts-track>
+      <ts-track title="Griffin-Lim (10 iterations)">
+        <ts-source src="p226_003_gla10.wav" type="audio/wav"></ts-source>
+      </ts-track>
+      <ts-track title="Griffin-Lim (100 iterations)">
+        <ts-source src="p226_003_gla100.wav" type="audio/wav"></ts-source>
+      </ts-track>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="trackswitch.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function() {
+          jQuery(".player").trackSwitch({spacebar: true, onlyradiosolo: true});
+      });
+    </script>
+ 
+  </body>
+</html>
