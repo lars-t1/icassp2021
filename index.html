@@ -6,9 +6,32 @@
     <title>Recurrent Phase Reconstruction Using Estimated Phase Derivatives
 from Deep Neural Networks | Listening Examples</title>
     <meta name="robots" content="noindex" />
+	
+	<style>
+	.grid-container {
+	  display: grid;
+	  grid-template-columns: auto auto auto auto auto;
+	  grid-gap: 10px;
+	  background-color: rgba(255, 255, 255, 0.1);
+	  padding: 10px;
+	}
 
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="trackswitch.css" />
+	.grid-container > div {
+	  background-color: rgba(255, 255, 255, 0.2);
+	  padding: 5px 0;
+	}
+
+	.item1 {
+	  text-align: center;
+	  font-size: 24px;
+	}
+	
+	.item2 {
+	  text-align: center;
+	  font-size: 18px;
+	}
+	</style>
+
   </head>
 
   <body>
@@ -19,49 +42,198 @@ from Deep Neural Networks | Listening Examples</h1>
     All speakers are contained in the test set. So they have not been seen before by the DNNs.
     
     <h2>p226_003.wav</h2>
-    <table style="width: 100%; table-layout: fixed; word-wrap: normal;">
-    <tr>
-      <td><strong>Original</strong></td>
-      <td>
-        <audio controls>
-          <source src="p226_003_uncorrupted.wav" type="audio/wav">
-        Your browser does not support the audio element.
-        </audio>
-      </td>
-    </tr>
-    </table>
-    
-    <div class="player">
-      <ts-track title="Original">
-        <ts-source src="p226_003_uncorrupted.wav" type="audio/wav"></ts-source>
-      </ts-track>
-      <ts-track title="Magnitude (zero-phase)">
-        <ts-source src="p226_003_gla0.wav" type="audio/wav"></ts-source>
-      </ts-track>
-      <ts-track title="IF integral">
-        <ts-source src="p226_003_if.wav" type="audio/wav"></ts-source>
-      </ts-track>
-      <ts-track title="RPU">
-        <ts-source src="p226_003_rpu.wav" type="audio/wav"></ts-source>
-      </ts-track>
-      <ts-track title="Proposed">
-        <ts-source src="p226_003_magnitudeWeightedAverage.wav" type="audio/wav"></ts-source>
-      </ts-track>
-      <ts-track title="Griffin-Lim (10 iterations)">
-        <ts-source src="p226_003_gla10.wav" type="audio/wav"></ts-source>
-      </ts-track>
-      <ts-track title="Griffin-Lim (100 iterations)">
-        <ts-source src="p226_003_gla100.wav" type="audio/wav"></ts-source>
-      </ts-track>
-    </div>
+	
+	<div class="grid-container">
+		<div class="item1">Original</div>
+		<div class="item1">Magnitude (zero-phase)</div>  
+		<div class="item1">IF integral</div>
+		<div class="item1">RPU</div>
+		<div class="item1">Proposed</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p226_003_uncorrupted.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p226_003_gla0.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio><br>(Without Griffin-Lim)<br><br>
+			<audio controls>
+				<source src="p226_003_gla10.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio><br>(10 Griffin-Lim iterations)<br><br>
+			<audio controls>
+				<source src="p226_003_gla100.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio><br>(100 Griffin-Lim iterations)
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p226_003_if.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p226_003_rpu.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p226_003_magnitudeWeightedAverage.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+	</div>
+	
+	
+	<h2>p240_003.wav</h2>
+	
+	<div class="grid-container">
+		<div class="item1">Original</div>
+		<div class="item1">Magnitude (zero-phase)</div>  
+		<div class="item1">IF integral</div>
+		<div class="item1">RPU</div>
+		<div class="item1">Proposed</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p240_003_uncorrupted.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p240_003_gla0.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio><br>(Without Griffin-Lim)<br><br>
+			<audio controls>
+				<source src="p240_003_gla10.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio><br>(10 Griffin-Lim iterations)<br><br>
+			<audio controls>
+				<source src="p240_003_gla100.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio><br>(100 Griffin-Lim iterations)
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p240_003_if.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p240_003_rpu.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p240_003_magnitudeWeightedAverage.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+	</div>
+	
+	
+	<h2>p275_088.wav</h2>
+	
+	<div class="grid-container">
+		<div class="item1">Original</div>
+		<div class="item1">Magnitude (zero-phase)</div>  
+		<div class="item1">IF integral</div>
+		<div class="item1">RPU</div>
+		<div class="item1">Proposed</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p275_088_uncorrupted.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p275_088_gla0.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio><br>(Without Griffin-Lim)<br><br>
+			<audio controls>
+				<source src="p275_088_gla10.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio><br>(10 Griffin-Lim iterations)<br><br>
+			<audio controls>
+				<source src="p275_088_gla100.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio><br>(100 Griffin-Lim iterations)
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p275_088_if.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p275_088_rpu.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p275_088_magnitudeWeightedAverage.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+	</div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="trackswitch.js"></script>
-    <script type="text/javascript">
-      jQuery(document).ready(function() {
-          jQuery(".player").trackSwitch({spacebar: true, onlyradiosolo: true});
-      });
-    </script>
+	<h2>p317_013.wav</h2>
+	
+	<div class="grid-container">
+		<div class="item1">Original</div>
+		<div class="item1">Magnitude (zero-phase)</div>  
+		<div class="item1">IF integral</div>
+		<div class="item1">RPU</div>
+		<div class="item1">Proposed</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p317_013_uncorrupted.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p317_013_gla0.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio><br>(Without Griffin-Lim)<br><br>
+			<audio controls>
+				<source src="p317_013_gla10.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio><br>(10 Griffin-Lim iterations)<br><br>
+			<audio controls>
+				<source src="p317_013_gla100.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio><br>(100 Griffin-Lim iterations)
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p317_013_if.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p317_013_rpu.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+		<div class="item2">
+			<audio controls>
+				<source src="p317_013_magnitudeWeightedAverage.wav" type="audio/wav">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+	</div>
  
   </body>
 </html>
