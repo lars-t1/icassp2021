@@ -31,6 +31,7 @@ from Deep Neural Networks | Listening Examples</title>
 	  text-align: center;
 	  font-size: 18px;
 	}
+
 	</style>
 
   </head>
@@ -40,16 +41,26 @@ from Deep Neural Networks | Listening Examples</title>
     <h1>Recurrent Phase Reconstruction Using Estimated Phase Derivatives
 from Deep Neural Networks | Listening Examples</h1>
 
-    All speakers are contained in the test set. So they have not been seen before by the DNNs.
+    <p>All speakers are contained in the test set which means they have not been seen by the DNNs before. The clean audio files used to create the following audio examples were taken from the VCTK database [1].</p>
+	
+	<p>The following methods were used to create the audio examples:
+	<ul>
+	  <li>Magnitude (zero-phase): Apply inverse short-time Fourier transform (ISTFT) to the given magnitude spectrum or, if specified, apply 10 or 100 iterations of the Griffin-Lim algorithm (see [4]).</li>
+	  <li>IF integral: Integrate the instantaneous frequency (IF) estimated by a DNN to reconstruct the phase spectrum, then combine it with the magnitude spectrum and apply the ISTFT (similar to [3]).</li>
+	  <li>RPU: Use recurrent phase unwrapping (RPU) to reconstruct the phase spectrum from phase derivatives estimated by DNNs, then combine it with the magnitude spectrum and apply the ISTFT (see [2]).</li>
+	  <li>Proposed: Use our weighted averaging procedure to reconstruct the phase spectrum from phase derivatives estimated by DNNs, then combine it with the magnitude spectrum and apply the ISTFT (see [5]).</li>
+	</ul></p>
+	
+	<br>
     
     <h2>p226_003.wav</h2>
 	
 	<div class="grid-container">
 		<div class="item1">Original</div>
 		<div class="item1">Magnitude (zero-phase)</div>  
-		<div class="item1">IF integral</div>
-		<div class="item1">RPU</div>
-		<div class="item1">Proposed</div>
+		<div class="item1">IF integral [3]</div>
+		<div class="item1">RPU [2]</div>
+		<div class="item1">Proposed [5]</div>
 		<div class="item2">
 			<audio controls>
 				<source src="p226_003_uncorrupted.wav" type="audio/wav">
@@ -60,15 +71,15 @@ from Deep Neural Networks | Listening Examples</h1>
 			<audio controls>
 				<source src="p226_003_gla0.wav" type="audio/wav">
 				Your browser does not support the audio element.
-			</audio><br>(Without Griffin-Lim)<br><br>
+			</audio><br>(Without Griffin-Lim [4])<br><br>
 			<audio controls>
 				<source src="p226_003_gla10.wav" type="audio/wav">
 				Your browser does not support the audio element.
-			</audio><br>(10 Griffin-Lim iterations)<br><br>
+			</audio><br>(10 Griffin-Lim [4] iterations)<br><br>
 			<audio controls>
 				<source src="p226_003_gla100.wav" type="audio/wav">
 				Your browser does not support the audio element.
-			</audio><br>(100 Griffin-Lim iterations)
+			</audio><br>(100 Griffin-Lim [4] iterations)
 		</div>
 		<div class="item2">
 			<audio controls>
@@ -90,14 +101,15 @@ from Deep Neural Networks | Listening Examples</h1>
 		</div>
 	</div>
 	
+	
 	<h2>p240_003.wav</h2>
 	
 	<div class="grid-container">
 		<div class="item1">Original</div>
 		<div class="item1">Magnitude (zero-phase)</div>  
-		<div class="item1">IF integral</div>
-		<div class="item1">RPU</div>
-		<div class="item1">Proposed</div>
+		<div class="item1">IF integral [3]</div>
+		<div class="item1">RPU [2]</div>
+		<div class="item1">Proposed [5]</div>
 		<div class="item2">
 			<audio controls>
 				<source src="p240_003_uncorrupted.wav" type="audio/wav">
@@ -108,15 +120,15 @@ from Deep Neural Networks | Listening Examples</h1>
 			<audio controls>
 				<source src="p240_003_gla0.wav" type="audio/wav">
 				Your browser does not support the audio element.
-			</audio><br>(Without Griffin-Lim)<br><br>
+			</audio><br>(Without Griffin-Lim [4])<br><br>
 			<audio controls>
 				<source src="p240_003_gla10.wav" type="audio/wav">
 				Your browser does not support the audio element.
-			</audio><br>(10 Griffin-Lim iterations)<br><br>
+			</audio><br>(10 Griffin-Lim [4] iterations)<br><br>
 			<audio controls>
 				<source src="p240_003_gla100.wav" type="audio/wav">
 				Your browser does not support the audio element.
-			</audio><br>(100 Griffin-Lim iterations)
+			</audio><br>(100 Griffin-Lim [4] iterations)
 		</div>
 		<div class="item2">
 			<audio controls>
@@ -144,9 +156,9 @@ from Deep Neural Networks | Listening Examples</h1>
 	<div class="grid-container">
 		<div class="item1">Original</div>
 		<div class="item1">Magnitude (zero-phase)</div>  
-		<div class="item1">IF integral</div>
-		<div class="item1">RPU</div>
-		<div class="item1">Proposed</div>
+		<div class="item1">IF integral [3]</div>
+		<div class="item1">RPU [2]</div>
+		<div class="item1">Proposed [5]</div>
 		<div class="item2">
 			<audio controls>
 				<source src="p275_088_uncorrupted.wav" type="audio/wav">
@@ -157,15 +169,15 @@ from Deep Neural Networks | Listening Examples</h1>
 			<audio controls>
 				<source src="p275_088_gla0.wav" type="audio/wav">
 				Your browser does not support the audio element.
-			</audio><br>(Without Griffin-Lim)<br><br>
+			</audio><br>(Without Griffin-Lim [4])<br><br>
 			<audio controls>
 				<source src="p275_088_gla10.wav" type="audio/wav">
 				Your browser does not support the audio element.
-			</audio><br>(10 Griffin-Lim iterations)<br><br>
+			</audio><br>(10 Griffin-Lim [4] iterations)<br><br>
 			<audio controls>
 				<source src="p275_088_gla100.wav" type="audio/wav">
 				Your browser does not support the audio element.
-			</audio><br>(100 Griffin-Lim iterations)
+			</audio><br>(100 Griffin-Lim [4] iterations)
 		</div>
 		<div class="item2">
 			<audio controls>
@@ -192,9 +204,9 @@ from Deep Neural Networks | Listening Examples</h1>
 	<div class="grid-container">
 		<div class="item1">Original</div>
 		<div class="item1">Magnitude (zero-phase)</div>  
-		<div class="item1">IF integral</div>
-		<div class="item1">RPU</div>
-		<div class="item1">Proposed</div>
+		<div class="item1">IF integral [3]</div>
+		<div class="item1">RPU [2]</div>
+		<div class="item1">Proposed [5]</div>
 		<div class="item2">
 			<audio controls>
 				<source src="p317_013_uncorrupted.wav" type="audio/wav">
@@ -205,11 +217,11 @@ from Deep Neural Networks | Listening Examples</h1>
 			<audio controls>
 				<source src="p317_013_gla0.wav" type="audio/wav">
 				Your browser does not support the audio element.
-			</audio><br>(Without Griffin-Lim)<br><br>
+			</audio><br>(Without Griffin-Lim [4])<br><br>
 			<audio controls>
 				<source src="p317_013_gla10.wav" type="audio/wav">
 				Your browser does not support the audio element.
-			</audio><br>(10 Griffin-Lim iterations)<br><br>
+			</audio><br>(10 Griffin-Lim [4] iterations)<br><br>
 			<audio controls>
 				<source src="p317_013_gla100.wav" type="audio/wav">
 				Your browser does not support the audio element.
@@ -234,6 +246,14 @@ from Deep Neural Networks | Listening Examples</h1>
 			</audio>
 		</div>
 	</div>
-
+	
+	<br>
+	
+	<h2>References</h2>
+	[1] Christophe Veaux, Junichi Yamagishi, and Kirsten MacDonald, “CSTR VCTK corpus: English multi-speaker corpus for CSTR voice cloning toolkit,” 2017.<br>
+	[2] Y. Masuyama, K. Yatabe, Y. Koizumi, Y. Oikawa, and N. Harada, “Phase reconstruction based on recurrent phase unwrapping with deep neural networks,” in IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2020, pp. 826–830.<br>
+	[3] Jesse H. Engel, Kumar Krishna Agrawal, Shuo Chen, Ishaan Gulrajani, Chris Donahue, and Adam Roberts, “Gansynth: Adversarial neural audio synthesis,” in International Conference on Learning Representations, ICLR, 2019.<br>
+	[4] D. Griffin and Jae Lim, “Signal estimation from modified short-time fourier transform,” IEEE Transactions on Acoustics, Speech, and Signal Processing, vol. 32, no. 2, pp. 236–243, Apr. 1984.<br>
+	[5] Lars Thieling, Daniel Wilhelm and Peter Jax, “Recurrent Phase Reconstruction Using Estimated Phase Derivatives from Deep Neural Networks,” (Submitted to ICASSP2021).<br>
   </body>
 </html>
